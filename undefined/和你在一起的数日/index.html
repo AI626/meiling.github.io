@@ -59,6 +59,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="This is a secret "/>
   <meta name="keyword" content="表白，心里话，于梅灵，yumeiling,love,livemylife,Blog"/>
+  <script>
+    (function () {
+        if ('{{ page.password }}') {
+            if (prompt('请输入文章密码') !== '{{ page.password }}') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("http://yumeiling.love"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
   <link rel="shortcut icon" href="/img/avatar/love.png"/>
 
   <!-- Place this tag in your head or just before your close body tag. -->
